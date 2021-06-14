@@ -1,0 +1,293 @@
+.Container {
+	height: 5vh;
+	background-color: orange;
+}
+
+#ProfileBackground {
+	position: relative;
+	background-image: url("https://source.unsplash.com/user/erondu/600x150");
+	height: 15vh;
+	margin-bottom: 65px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#profileImage {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 3px solid white;
+	position: absolute;
+	top: 112px;
+	left: 20px;
+}
+#profileImage:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+#cameraIcon {
+	cursor: pointer;
+}
+
+.cameraIcon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: white;
+	border-radius: 50%;
+	padding: 5px;
+	cursor: pointer;
+}
+.cameraIcon:hover {
+	opacity: 0.8;
+}
+
+.Pencil {
+	position: absolute;
+	top: 145px;
+	right: 8px;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+.Pencil:hover {
+	border-radius: 50%;
+	background-color: rgba(231, 229, 229, 0.75);
+	opacity: 0.8;
+}
+
+.carousel {
+	position: relative;
+}
+
+.rec.rec-arrow-right {
+	position: absolute;
+	top: 20px;
+	right: -15px;
+	border: none;
+	border-radius: 0;
+}
+.rec.rec-arrow-left {
+	position: absolute;
+	top: 20px;
+	left: -15px;
+	border: none;
+	border-radius: 0;
+}
+
+.rec.rec-arrow {
+	width: 0px;
+	height: 0px;
+}
+.Container {
+	height: 5vh;
+	background-color: orange;
+}
+
+#ProfileBackground {
+	position: relative;
+	background-image: url("https://source.unsplash.com/user/erondu/600x150");
+	min-height: 195.5px;
+	max-height: 195.5px;
+	margin-bottom: 65px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#profileImage {
+	width: 152px;
+	height: 152px;
+	border-radius: 50%;
+	border: 4px solid white;
+	position: absolute;
+	top: 95px;
+	left: 20px;
+}
+
+#profileImage:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+#cameraIcon {
+	cursor: pointer;
+}
+
+.cameraIcon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: white;
+	border-radius: 50%;
+	padding: 5px;
+	cursor: pointer;
+}
+.cameraIcon:hover {
+	opacity: 0.8;
+}
+
+.Pencil {
+	position: absolute;
+	top: 210px;
+	right: 20px;
+}
+
+.Pencil:hover {
+	border-radius: 50%;
+	background-color: rgba(231, 229, 229, 0.75);
+	opacity: 0.8;
+}
+
+.carousel {
+	position: relative;
+}
+
+.rec.rec-arrow-right {
+	position: absolute;
+	top: 90px;
+	right: 10px;
+	border: none;
+	border-radius: 0;
+}
+.rec.rec-arrow-left {
+	position: absolute;
+	top: 90px;
+	left: 620px;
+	border: none;
+	border-radius: 0;
+}
+
+.rec.rec-arrow {
+	width: 0px;
+	height: 0px;
+}
+
+button.sc-gtsrHT.hliWYQ.rec.rec-arrow.rec.rec-arrow-left,
+button.sc-gtsrHT.hliWYQ.rec.rec-arrow.rec.rec-arrow-right {
+	color: #000;
+	background-color: white;
+}
+
+button.sc-gtsrHT.hliWYQ.rec.rec-arrow.rec.rec-arrow-left:hover:enabled,
+button.sc-gtsrHT.hliWYQ.rec.rec-arrow.rec.rec-arrow-right:hover:enabled {
+	color: #000;
+	border-radius: 50%;
+}
+
+.rec-carousel-item {
+	margin: 5px;
+}
+
+.rec.rec-arrow:disabled {
+	visibility: hidden;
+}
+
+div.sc-fujyAs.bGFcTk.rec.rec-pagination {
+	display: none;
+}
+
+.rec-carousel-item {
+	margin: 5px;
+}
+
+.rec.rec-arrow:disabled {
+	visibility: hidden;
+}
+
+div.sc-fujyAs.bGFcTk.rec.rec-pagination {
+	display: none;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	width: 25px;
+	height: 25px;
+	background: white;
+	position: relative;
+	border: 1px solid #14141499;
+	border-radius: 20%;
+	margin-right: 10px;
+}
+
+input[type="checkbox"]:checked:after {
+	background: #057642;
+	content: "🗸";
+	position: absolute;
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0px;
+}
+
+.textarea{
+	width: 100% !important;
+	margin-right: 0;
+	padding-right: 0;
+}

@@ -1,0 +1,13 @@
+.edit-button {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #ebebeb;
+}

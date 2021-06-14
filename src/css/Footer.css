@@ -1,0 +1,16 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.text {
+  font-size: 12px;
+  text-align: inherit;
+}
+
+.copyright {
+  margin-top: 15px;
+}

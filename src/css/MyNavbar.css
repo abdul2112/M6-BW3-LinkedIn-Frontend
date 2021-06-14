@@ -1,0 +1,50 @@
+.linkedin_logo {
+  height: 40px;
+  width: 40px;
+}
+
+.searchBar input {
+  line-height: 2.3px;
+  border: none;
+  background-color: #eef3f8;
+  width: 15rem;
+  height: 2.5rem;
+}
+.user-icon {
+  margin-left: 10px;
+  margin-bottom: none;
+}
+.vr {
+  border-left: 0.5px solid rgb(223, 223, 223);
+  height: 55px;
+  margin-left: 20px;
+}
+.premium span {
+  font-size: smaller;
+  color: #f9bc08;
+}
+
+header {
+  background-color: white;
+}
+
+#basic-nav-dropdown {
+  padding: 0;
+}
+/* div.dropdown a {
+	padding: 0;
+	display: flex;
+	/* justify-content: center; */
+/* align-items: center; */
+/* flex-direction: column; */
+/* } */
+
+.header {
+  min-height: 8vh;
+  top: 0;
+}
+
+#search:focus {
+  background-color: #eef3f8;
+  box-shadow: none;
+}

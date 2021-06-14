@@ -1,0 +1,16 @@
+.list-group-item {
+  border: none;
+}
+
+.list-group .edit-button {
+  visibility: hidden;
+  margin-left: auto;
+}
+
+.list-group-item:hover .edit-button {
+  visibility: visible;
+}
+
+.list-group a {
+  color: inherit;
+}

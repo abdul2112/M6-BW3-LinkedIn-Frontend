@@ -1,0 +1,36 @@
+#dashCard {
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: #dde6f1;
+}
+
+#privText {
+  font-style: italic;
+}
+
+.mutedText {
+  font-size: 14px;
+}
+
+#trackText {
+  margin-left: 1.35vw;
+}
+
+#dashCardComponent {
+  border-radius: 15px;
+}
+
+.zeroText {
+  color: #2f72c6;
+  font-weight: 300;
+}
+
+.dashCardStats {
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.dashBoardContent:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

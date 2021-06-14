@@ -1,0 +1,20 @@
+#bg-img {
+	position: relative;
+}
+
+#image-icon {
+	width: 78px;
+	height: 70px;
+	border-radius: 50%;
+	border: 3px solid white;
+	position: absolute;
+	top: 36px;
+	left: 85px;
+	background-image: url('https://wallpaperaccess.com/full/1556608.jpg');
+}
+.underline strong:hover {
+	text-decoration: underline;
+}
+/* :hover {
+	background-color: grey;
+} */
