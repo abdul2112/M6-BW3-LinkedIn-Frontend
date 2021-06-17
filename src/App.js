@@ -18,6 +18,7 @@ class App extends React.Component {
       myProfile: [],
       bearerToken:
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNiMDY0ZTk1NmNjZDAwMTU4NTM3NjUiLCJpYXQiOjE2MjM5MTgxNTgsImV4cCI6MTYyNTEyNzc1OH0.vEZaWF1FALwDlLviseLHROpmOu0UPflnkBZKGdja-E4',
+      myId: '60ca18196a8bb303585e1db6',
       posts: [],
       query: '',
       currProfile: [],
@@ -66,13 +67,13 @@ class App extends React.Component {
   getMyProfile = async () => {
     try {
       const requestProfile = await fetch(
-        'https://striveschool-api.herokuapp.com/api/profile/me',
-        {
-          method: 'GET',
-          headers: {
-            Authorization: 'Bearer ' + this.state.bearerToken,
-          },
-        }
+        `https://bw-3-linkedn.herokuapp.com/api/profile/${this.state.myId}`
+        // {
+        //   method: 'GET',
+        //   headers: {
+        //     Authorization: 'Bearer ' + this.state.bearerToken,
+        //   },
+        // }
       );
       if (requestProfile.ok) {
         const response = await requestProfile.json();
@@ -86,7 +87,7 @@ class App extends React.Component {
   getProfile = async () => {
     try {
       const requestProfile = await fetch(
-        'https://striveschool-api.herokuapp.com/api/profile/' +
+        'https://bw-3-linkedn.herokuapp.com/api/profile/' +
           this.state.currProfileId,
         {
           method: 'GET',
@@ -107,7 +108,7 @@ class App extends React.Component {
   getPosts = async () => {
     try {
       const requestPosts = await fetch(
-        'https://striveschool-api.herokuapp.com/api/posts/',
+        'https://bw-3-linkedn.herokuapp.com/api/posts/',
         {
           method: 'GET',
           headers: {

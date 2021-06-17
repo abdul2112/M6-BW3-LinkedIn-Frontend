@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Box from "../components/parts/Box";
-import ItemsList from "../components/parts/ItemsList";
-import ModalExperience from "./ModelExperience";
+import React, { Component } from 'react';
+import Box from '../components/parts/Box';
+import ItemsList from '../components/parts/ItemsList';
+import ModalExperience from './ModelExperience';
 class Experience extends Component {
   state = {
     experiences: [],
@@ -20,14 +20,14 @@ class Experience extends Component {
     try {
       const identity = this.props.profileId;
       const newUrl =
-        "https://striveschool-api.herokuapp.com/api/profile/" +
+        'https://bw-3-linkedn.herokuapp.com/api/profile/' +
         identity +
-        "/experiences";
+        '/experiences';
       const response = await fetch(newUrl, {
-        method: "GET",
+        method: 'GET',
         headers: {
-          Authorization: "Bearer " + this.props.bearerToken,
-          "Content-Type": "application/json",
+          Authorization: 'Bearer ' + this.props.bearerToken,
+          'Content-Type': 'application/json',
         },
       });
       if (response.ok) {
@@ -61,7 +61,7 @@ class Experience extends Component {
   };
 
   handleUpdate = (bool) => {
-    console.log("Updating...");
+    console.log('Updating...');
     this.setState((state) => {
       return { updated: bool, open: false, currentExperience: {} };
     });
@@ -72,7 +72,7 @@ class Experience extends Component {
       <Box
         add={true}
         onEditButtonClick={this.handleEditButtonClick}
-        title='Experience'
+        title="Experience"
         render={(state) => (
           <>
             <ItemsList

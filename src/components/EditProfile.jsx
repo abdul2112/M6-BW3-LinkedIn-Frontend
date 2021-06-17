@@ -1,5 +1,5 @@
-import { Modal, Form } from "react-bootstrap";
-import React, { Component } from "react";
+import { Modal, Form } from 'react-bootstrap';
+import React, { Component } from 'react';
 
 class EditProfile extends Component {
   constructor(props) {
@@ -7,10 +7,10 @@ class EditProfile extends Component {
     this.state = {
       formerName: false,
       profile: {
-        name: "",
-        surname: "",
-        title: "",
-        area: "",
+        name: '',
+        surname: '',
+        title: '',
+        area: '',
       },
     };
   }
@@ -18,13 +18,13 @@ class EditProfile extends Component {
   getProfile = async () => {
     try {
       const request = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/me",
+        'https://bw-3-linkedn.herokuapp.com/api/profile/me',
         {
-          method: "GET",
+          method: 'GET',
           headers: {
             Authorization:
               // "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk4ZmE0MTYxOWU1ZDAwMTUxZjhmN2YiLCJpYXQiOjE2MjA2MzgyNzMsImV4cCI6MTYyMTg0Nzg3M30.D-RniP4L8eJ8XOdOjRXswq8LsRnPVK-QYiUr8h9fPhk",
-              "Bearer " + this.props.token,
+              'Bearer ' + this.props.token,
           },
         }
       );
@@ -64,13 +64,13 @@ class EditProfile extends Component {
 
     try {
       const request = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/",
+        'https://bw-3-linkedn.herokuapp.com/api/profile/',
         {
-          method: "PUT",
+          method: 'PUT',
           body: JSON.stringify(this.state.profile),
           headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + this.props.token,
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + this.props.token,
 
             // "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk4ZmE0MTYxOWU1ZDAwMTUxZjhmN2YiLCJpYXQiOjE2MjA2MzgyNzMsImV4cCI6MTYyMTg0Nzg3M30.D-RniP4L8eJ8XOdOjRXswq8LsRnPVK-QYiUr8h9fPhk",
           },
@@ -78,11 +78,11 @@ class EditProfile extends Component {
       );
       if (request.ok) {
         const response = await request.json();
-        alert("Profile updated successfully");
+        alert('Profile updated successfully');
         this.props.editProfileOff();
         console.log(response);
       } else {
-        console.log("I could not updated your profile");
+        console.log('I could not updated your profile');
       }
     } catch (error) {
       console.log(error);
@@ -93,156 +93,160 @@ class EditProfile extends Component {
     return (
       <>
         <Modal
-          size='lg'
+          size="lg"
           show={this.props.editProfile}
           onHide={this.props.editProfileOff}
-          aria-labelledby='example-modal-sizes-title-lg'>
+          aria-labelledby="example-modal-sizes-title-lg"
+        >
           <Modal.Header closeButton>
             <Modal.Title
-              id='example-modal-sizes-title-lg'
-              style={{ fontWeight: "350" }}>
+              id="example-modal-sizes-title-lg"
+              style={{ fontWeight: '350' }}
+            >
               Edit Intro
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={this.updateProfile}>
-              <div className='container-fluid mx-0 px-0'>
-                <div className='row justify-content-between mt-4'>
-                  <div className='col-6 text-muted'>First Name *</div>
-                  <div className='col-6 text-muted'>Last Name *</div>
+              <div className="container-fluid mx-0 px-0">
+                <div className="row justify-content-between mt-4">
+                  <div className="col-6 text-muted">First Name *</div>
+                  <div className="col-6 text-muted">Last Name *</div>
                 </div>
-                <div className='row justify-content-between'>
-                  <div className='col-6 w-100'>
+                <div className="row justify-content-between">
+                  <div className="col-6 w-100">
                     <input
                       value={this.state.profile.name}
                       onChange={this.handleData}
-                      id='name'
-                      className='w-100'
-                      type='text'
+                      id="name"
+                      className="w-100"
+                      type="text"
                     />
                   </div>
-                  <div className='col-6 w-100'>
+                  <div className="col-6 w-100">
                     <input
                       value={this.state.profile.surname}
                       onChange={this.handleData}
-                      id='surname'
-                      className='w-100'
-                      type='text'
+                      id="surname"
+                      className="w-100"
+                      type="text"
                     />
                   </div>
                 </div>
-                <div className='row mt-2 w-100'>
-                  <div className='col-12'>
+                <div className="row mt-2 w-100">
+                  <div className="col-12">
                     <a
                       onClick={() =>
                         this.setState({ formerName: !this.state.formerName })
                       }
-                      href='/'>
+                      href="/"
+                    >
                       Add former name
                     </a>
                   </div>
                 </div>
-                <div className='row'>
+                <div className="row">
                   {this.state.formerName ? (
                     <>
-                      <div className='col-12 w-100'>
-                        <label htmlFor='formerName' className='text-muted'>
+                      <div className="col-12 w-100">
+                        <label htmlFor="formerName" className="text-muted">
                           Former Name
                         </label>
                       </div>
-                      <div className='col-12 w-100'>
+                      <div className="col-12 w-100">
                         <input
-                          className='w-100'
-                          type='text'
-                          placeholder='Type in your former name'
+                          className="w-100"
+                          type="text"
+                          placeholder="Type in your former name"
                         />
                       </div>
                     </>
                   ) : (
-                    <div className='col-12'></div>
+                    <div className="col-12"></div>
                   )}
                 </div>
-                <div className='row w-100 mt-4 mb-2'>
-                  <div className='col-12 text-muted'>
+                <div className="row w-100 mt-4 mb-2">
+                  <div className="col-12 text-muted">
                     + Record name pronunciation
                   </div>
-                  <div className='col-12'>
+                  <div className="col-12">
                     Name pronunciation can only be added using our mobile app.
                   </div>
                 </div>
-                <div className='row w-100 mx-0 px-0'>
-                  <div className='col-12 text-muted'>Headline *</div>
-                  <div className='col-12 w-100'>
+                <div className="row w-100 mx-0 px-0">
+                  <div className="col-12 text-muted">Headline *</div>
+                  <div className="col-12 w-100">
                     <textarea
                       onChange={this.handleData}
                       value={this.state.profile.title}
-                      className='textarea'
-                      name='headline'
-                      id='title'
-                      rows='2'></textarea>
+                      className="textarea"
+                      name="headline"
+                      id="title"
+                      rows="2"
+                    ></textarea>
                   </div>
                 </div>
-                <div className='row w-100 mt-5 mb-4'>
-                  <div className='col-12'>
-                    <a href='/'>+ Add current position</a>
+                <div className="row w-100 mt-5 mb-4">
+                  <div className="col-12">
+                    <a href="/">+ Add current position</a>
                   </div>
                 </div>
-                <div className='row w-100'>
-                  <div className='col-12 w-100'>
-                    <Form.Group controlId='education'>
-                      <Form.Label className='text-muted'>
+                <div className="row w-100">
+                  <div className="col-12 w-100">
+                    <Form.Group controlId="education">
+                      <Form.Label className="text-muted">
                         Education *
                       </Form.Label>
-                      <Form.Control as='select'>
+                      <Form.Control as="select">
                         <option>Select</option>
                         <option>Strive School</option>
                       </Form.Control>
                     </Form.Group>
                   </div>
-                  <div className='col-12'>
-                    <a href='/'> Add new education</a>
+                  <div className="col-12">
+                    <a href="/"> Add new education</a>
                   </div>
                 </div>
-                <div className='row mt-3 mb-3'>
-                  <div className='col-12 d-flex justify-content-start align-items-center'>
-                    <input className='' type='checkbox' id='intro' />
-                    <label className='text-muted' htmlFor='intro'>
+                <div className="row mt-3 mb-3">
+                  <div className="col-12 d-flex justify-content-start align-items-center">
+                    <input className="" type="checkbox" id="intro" />
+                    <label className="text-muted" htmlFor="intro">
                       Show education in my intro
                     </label>
                   </div>
                 </div>
-                <div className='row w-100 mb-3'>
-                  <div className='col-12 mb-1 text-muted'>Country/Region *</div>
-                  <div className='col-12'>
+                <div className="row w-100 mb-3">
+                  <div className="col-12 mb-1 text-muted">Country/Region *</div>
+                  <div className="col-12">
                     <input
                       onChange={this.handleData}
-                      id='area'
+                      id="area"
                       value={this.state.profile.area}
-                      className='w-100'
-                      type='text'
+                      className="w-100"
+                      type="text"
                     />
                   </div>
                 </div>
-                <div className='row w-100'>
-                  <div className='col-3 w-100 text-muted'>Postal code</div>
-                  <div className='col-9 w-100 text-muted'>
+                <div className="row w-100">
+                  <div className="col-3 w-100 text-muted">Postal code</div>
+                  <div className="col-9 w-100 text-muted">
                     Location within this area
                   </div>
                 </div>
-                <div className='row w-100 mb-3'>
-                  <div className='col-3 w-100'>
-                    <input className='w-100' type='text' disabled />
+                <div className="row w-100 mb-3">
+                  <div className="col-3 w-100">
+                    <input className="w-100" type="text" disabled />
                   </div>
-                  <div className='col-9 w-100'>
-                    <input className=' w-100' type='text' disabled />
+                  <div className="col-9 w-100">
+                    <input className=" w-100" type="text" disabled />
                   </div>
                 </div>
-                <div className='row w-100'>
-                  <div className='col-12'>
-                    <Form.Group controlId='industry'>
-                      <Form.Label className='text-muted'>Industry *</Form.Label>
-                      <Form.Control as='select'>
-                        <option value=''>Choose an industry…</option>
+                <div className="row w-100">
+                  <div className="col-12">
+                    <Form.Group controlId="industry">
+                      <Form.Label className="text-muted">Industry *</Form.Label>
+                      <Form.Control as="select">
+                        <option value="">Choose an industry…</option>
                         <option>Accounting</option>
                         <option>Airlines/Aviation</option>
                         <option>Alternative Dispute Resolution</option>
@@ -397,21 +401,22 @@ class EditProfile extends Component {
                     </Form.Group>
                   </div>
                 </div>
-                <div className='row'>
-                  <div className='col-12'> Contact info </div>
-                  <div className='col-12 mt-2'>
+                <div className="row">
+                  <div className="col-12"> Contact info </div>
+                  <div className="col-12 mt-2">
                     Profile URL, Email
-                    <hr className='bg-dark' />
+                    <hr className="bg-dark" />
                   </div>
                 </div>
-                <div className='row mt-1 '>
-                  <div className='col-12'>
+                <div className="row mt-1 ">
+                  <div className="col-12">
                     <hr />
                   </div>
-                  <div className='col-12 d-flex justify-content-end'>
+                  <div className="col-12 d-flex justify-content-end">
                     <button
-                      className='btn btn-primary rounded-pill'
-                      type='submit'>
+                      className="btn btn-primary rounded-pill"
+                      type="submit"
+                    >
                       Save
                     </button>
                   </div>
