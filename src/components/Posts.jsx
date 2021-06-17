@@ -28,7 +28,7 @@ class Posts extends Component {
           {
             method: 'POST',
             headers: {
-              Authorization: 'Bearer ' + this.props.bearerToken,
+              // Authorization: 'Bearer ' + this.props.bearerToken,
               'Content-Type': 'application/json',
             },
             body: JSON.stringify(this.state.post),
