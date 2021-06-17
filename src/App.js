@@ -18,7 +18,7 @@ class App extends React.Component {
       myProfile: [],
       bearerToken:
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNiMDY0ZTk1NmNjZDAwMTU4NTM3NjUiLCJpYXQiOjE2MjM5MTgxNTgsImV4cCI6MTYyNTEyNzc1OH0.vEZaWF1FALwDlLviseLHROpmOu0UPflnkBZKGdja-E4',
-      myId: '60ca18196a8bb303585e1db6',
+      myId: '60cb6426c026bb0015c9699e',
       posts: [],
       query: '',
       currProfile: [],
