@@ -21,7 +21,7 @@ class Posts extends Component {
 
   createPost = async (e) => {
     e.preventDefault();
-    if (this.state.post.text.length >= 10) {
+    if (this.state.post.text.length >= 1) {
       try {
         let response = await fetch(
           'https://bw-3-linkedn.herokuapp.com/api/posts/',
